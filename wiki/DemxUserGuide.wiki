@@ -12,40 +12,40 @@ Because the modeling process is manual and takes lot of effort, each analyst can
  
 <h2>How the application works?</h2>
 
-The application is a small program that investors/analysts can download and run on their PC. Only requirement is to have XBRL statements available in a directory on that PC. It includes a utility to help with downloading or scheduling a regular download of the statements for the companies they are interested in from SEC website. 
+<p>The application is a small program that investors/analysts can download and run on their PC. Only requirement is to have XBRL statements available in a directory on that PC. It includes a utility to help with downloading or scheduling a regular download of the statements for the companies they are interested in from SEC website. </p>
 
-Typical session:
+<p>Typical session:</p>
  
-·         User opens a command prompt
+<ul>
+<li>User opens a command prompt </li>
  
-·         Runs the application with company ticker and output directory. Application generates the valuation spreadsheet in the specified dierctory
+<li> Runs the application with company ticker and output directory. Application generates the valuation spreadsheet in the specified dierctory </li>
  
-·         User opens the generated valuation model in the output directory and continue further analysis by modifying the drivers and run what if analysis
+<li>User opens the generated valuation model in the output directory and continue further analysis by modifying the drivers and run what if analysis </li>
+</ul>
  
-Generated spreadsheet model uses Revenue Growth, Gross Margin, Operating Expenses as a percentage of revenue and tax rate as drivers and provide analysis for all the quarters that XBRL data is available. It also estimates the drivers from historical trends and estimates the income for next four quarters.  This brings new level of insight for non-professional investors new to financial modeling.
+<p>Generated spreadsheet model uses Revenue Growth, Gross Margin, Operating Expenses as a percentage of revenue and tax rate as drivers and provide analysis for all the quarters that XBRL data is available. It also estimates the drivers from historical trends and estimates the income for next four quarters.  This brings new level of insight for non-professional investors new to financial modeling. </p>
  
-  System Generated Income Model:
 
 
  
-Advanced Modeling 
+<h2>Advanced Modeling </h2>
 
-Model generation is driven by a fully configurable excel template. Template mirrors the current process that analysts use and modifying it does not require any programming knowledge. Users can build their own template and provide it as an argument while running the program. Application will generate valuation model based on the provided template instead using the default one 
+<p>Model generation is driven by a fully configurable excel template. Template mirrors the current process that analysts use and modifying it does not require any programming knowledge. Users can build their own template and provide it as an argument while running the program. Application will generate valuation model based on the provided template instead using the default one </p>
 
-Here is the default template used to produce standard valuation model:
+
  
+<p>Template separates current/historical from future/forecast. Driver values are calculated during the current phase and then used to generate the model values in forecast part. Analysts can add any number of model or driver elements. They build the model for one quarter in the same way they do now and then provide mapping to tie the element to XBRL tags. Application will generate the full spreadsheet model for each quarter by combining the data from XBRL statements and the relationships specified as formulas. </p>
  
+<p> Since templates are pluggable components, we envision separate market for industry specific or company specific templates.  Sophisticated users with industry and financial modeling expertise can build these excel templates and make them available for investors. This excel based flexible template framework will allow users to build models using any XBRL element in XBRL Taxonomy.  We believe it has potential to bring currently unused detail data in financial statements into wider use. </p>
  
-Template separates current/historical from future/forecast. Driver values are calculated during the current phase and then used to generate the model values in forecast part. Analysts can add any number of model or driver elements. They build the model for one quarter in the same way they do now and then provide mapping to tie the element to XBRL tags. Application will generate the full spreadsheet model for each quarter by combining the data from XBRL statements and the relationships specified as formulas.
+<h2>Future Enhancements/Possibilities</h2>
  
-Since templates are pluggable components, we envision separate market for industry specific or company specific templates.  Sophisticated users with industry and financial modeling expertise can build these excel templates and make them available for investors. This excel based flexible template framework will allow users to build models using any XBRL element in XBRL Taxonomy.  We believe it has potential to bring currently unused detail data in financial statements into wider use.
+<ul>
+<li> Web interface to specify the company to generate the valuation model and download it through browser. Also provide ability to manage templates over the web interface. </li>
  
-Future Enhancements/Possibilities
+<li>      Use an xml based database such as Mark Logic to manage XBRL statements and templates </li>
  
-·         Web interface to specify the company to generate the valuation model and download it through browser. Also provide ability to manage templates over the web interface.
+<li>        Build it as a service over internet/web with ability for users to manage and share their templates with other users. Manage a central database of all XBRL statements. </li>
  
-·         Use an xml based database such as Mark Logic to manage XBRL statements and templates
- 
-·         Build it as a service over internet/web with ability for users to manage and share their templates with other users. Manage a central database of all XBRL statements.
- 
-·         Ability to alert if a model element value exceeds specified threshold after applying newly available XBRL statement. For example, send alert if the difference between Cash Flow from Operations and Net Income exceeds specified percentage of revenue. This might indicate aggressive accounting requiring further analysis of revenue recognition practices. 
+<li>    Ability to alert if a model element value exceeds specified threshold after applying newly available XBRL statement. For example, send alert if the difference between Cash Flow from Operations and Net Income exceeds specified percentage of revenue. This might indicate aggressive accounting requiring further analysis of revenue recognition practices. </li>

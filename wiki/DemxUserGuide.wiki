@@ -10,7 +10,7 @@ Because the modeling process is manual and takes lot of effort, each analyst can
 = Details =
 
  
-<h2>How the application works?<h2>
+<h2>How the application works?</h2>
 
 The application is a small program that investors/analysts can download and run on their PC. Only requirement is to have XBRL statements available in a directory on that PC. It includes a utility to help with downloading or scheduling a regular download of the statements for the companies they are interested in from SEC website. 
 
